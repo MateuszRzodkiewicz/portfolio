@@ -1,0 +1,32 @@
+.h2Concact {
+  font-size: 64px;
+  text-align: center;
+  margin: 50px;
+}
+.concactP {
+  font-size: 24px;
+  padding: 10px;
+  /* text-align: center; */
+}
+#Concact {
+  display: flex;
+  word-break: break-word;
+}
+
+.flexGrowConcact {
+  width: 50%;
+}
+
+.widthSectionConcact {
+  max-width: 98vw;
+}
+
+@media screen and (max-width: 1070px) {
+  #Concact {
+    flex-direction: column;
+    text-align: center;
+  }
+  .flexGrowConcact {
+    width: 100%;
+  }
+}

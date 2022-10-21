@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  color: white;
+}
+body {
+  background: rgb(1, 1, 1);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 1, 1) 26%,
+    rgba(16, 16, 17, 1) 66%,
+    rgba(11, 17, 52, 0.9724264705882353) 96%
+  );
+}
+html a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.welcomeImg {
+  background-image: url(../pictures/jsCoffee.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
+}
+.containerForName {
+  text-align: center;
+  padding-top: 70px;
+}
+.invisible {
+  opacity: 0;
+  font-size: 30;
+  color: white;
+}
+.visible {
+  transition: 1.2s;
+  opacity: 1;
+  font-size: 84px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .visible {
+    transition: 1.2s;
+    opacity: 1;
+    font-size: 64px;
+    color: white;
+  }
+}
