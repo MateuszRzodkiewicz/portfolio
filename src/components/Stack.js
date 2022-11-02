@@ -7,36 +7,45 @@ import ts from "../pictures/ts.png";
 
 function Stack() {
   const [scrollY, setScrollY] = useState(window.scrollY);
-  const [jsLogo, setJsLogo] = useState("first");
+  const [jsLogo, setJsLogo] = useState("second");
   const [reactLogo, setReactLogo] = useState("");
   const [tsLogo, setTsLogo] = useState("");
   const [cssLogo, setCssLogo] = useState("");
+  const [offsetHeight, setOffsetHeight] = useState();
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollY(window.scrollY);
+      let offsetHeightAbout = document.getElementById("About").offsetHeight;
+      let offsetHeightMenu = document.getElementById("Menu").offsetHeight;
+      let offsetHeightHeader =
+        document.getElementById("App-HeaderId").offsetHeight;
+      setOffsetHeight(
+        offsetHeightAbout + offsetHeightHeader + offsetHeightMenu
+      );
     });
   }, []);
 
   useEffect(() => {
-    if (scrollY > 1400) {
+    if (scrollY > offsetHeight) {
       setJsLogo("first");
+      console.log(jsLogo);
     }
-    if (scrollY <= 1700 && scrollY > 1400) {
+    if (scrollY <= offsetHeight + 300 && scrollY > offsetHeight) {
       setJsLogo("fromRight");
     }
-    if (scrollY > 1700) {
+    if (scrollY > offsetHeight + 300) {
       setJsLogo("goLeft");
       setReactLogo("fromBottom");
     } else setReactLogo("");
-    if (scrollY > 2000) {
+    if (scrollY > offsetHeight + 600) {
       setReactLogo("goTop");
       setTsLogo("fromRight");
     } else setTsLogo("");
-    if (scrollY > 2300) {
+    if (scrollY > offsetHeight + 900) {
       setTsLogo("goLeft");
       setCssLogo("fromTop");
     } else setCssLogo("");
-    if (scrollY > 2600) {
+    if (scrollY > offsetHeight + 1200) {
     }
   }, [scrollY]);
 
@@ -58,17 +67,23 @@ function Stack() {
         <img
           src={react}
           alt="js"
-          className={`${reactLogo} second ${scrollY > 1700 && "first"} sizePng`}
+          className={`${reactLogo} second ${
+            scrollY > offsetHeight + 300 && "first"
+          } sizePng`}
         />
         <img
           src={ts}
           alt="js"
-          className={`${tsLogo} second ${scrollY > 2000 && "first"} sizePng`}
+          className={`${tsLogo} second ${
+            scrollY > offsetHeight + 600 && "first"
+          } sizePng`}
         />
         <img
           src={css}
           alt="js"
-          className={`${cssLogo} second ${scrollY > 2300 && "first"} sizePng`}
+          className={`${cssLogo} second ${
+            scrollY > offsetHeight + 900 && "first"
+          } sizePng`}
         />
       </div>
     </div>

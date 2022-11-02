@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header id="App-HeaderId" className="App-header">
         <div className="welcomeImg">
           <div className="containerForName" onClick={scrollWelcomeImage}>
             <p className={showTekstCss}>Mateusz Rzodkiewicz</p>
