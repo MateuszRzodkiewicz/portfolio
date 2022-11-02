@@ -28,7 +28,6 @@ function Stack() {
   useEffect(() => {
     if (scrollY > offsetHeight) {
       setJsLogo("first");
-      console.log(jsLogo);
     }
     if (scrollY <= offsetHeight + 300 && scrollY > offsetHeight) {
       setJsLogo("fromRight");
