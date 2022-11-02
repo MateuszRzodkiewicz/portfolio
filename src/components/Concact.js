@@ -10,7 +10,7 @@ function Concact() {
             E-mail: <span>mateusz.rzodkiewicz8@gmail.com</span>
           </p>
           <p className="concactP">
-            Telefon: <spna>512-719-736</spna>
+            Telefon: <span>512-719-736</span>
           </p>
         </div>
         <div className="flexGrowConcact">

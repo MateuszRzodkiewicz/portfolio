@@ -21,7 +21,7 @@ function Stack() {
     if (scrollY > 1400) {
       setJsLogo("first");
     }
-    if (scrollY < 1700) {
+    if (scrollY <= 1700 && scrollY > 1400) {
       setJsLogo("fromRight");
     }
     if (scrollY > 1700) {

@@ -1,5 +1,5 @@
 .sticky {
-  height: 240vh;
+  height: 260vh;
 }
 
 #Stack {
@@ -181,12 +181,6 @@
     text-align: center;
     font-size: 76px;
   }
-
-  /* .sizePng {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-  } */
 }
 @media screen and (max-width: 514px) {
   .StackH1 {
