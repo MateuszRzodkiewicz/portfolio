@@ -22,7 +22,7 @@ function Project() {
             <p className="descriptionProject">
               Strona przedstawia sklep z kawa, herbatą oraz yerbamate. Została
               napisana w React z użyciem TypeScript. Znajdują sie tam takie
-              elemnty jak: wyszukiwarka produktów, karuzela z produktami,
+              elementy jak: wyszukiwarka produktów, karuzela z produktami,
               koszyk, formulaż do wysylki z walidacją oraz zakladka z ulubionymi
               produktami.
             </p>

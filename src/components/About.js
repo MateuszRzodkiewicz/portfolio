@@ -1,10 +1,12 @@
 import "../css/about.css";
-
+import avatar from "../pictures/avatar.png";
 function About() {
   return (
     <div id="About" className="AboutMe">
       <section className="flexContianer">
-        <div className="containerForMeImg"></div>
+        <div className="containerForMeImg">
+          <img className="avatar" src={avatar} alt="avatar" />
+        </div>
         <section className="textAboutMe">
           <p>
             Cześć, mam na imę Mateusz Rzodkiewicz. Mam 26 lat i jestem
